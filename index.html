@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cruz Ámbar CDMX | Atención prehospitalaria gratuita y voluntariado</title>
+  <meta name="description" content="Asociación civil sin fines de lucro en la Ciudad de México. Voluntarios que brindan atención prehospitalaria gratuita y comparten primeros auxilios. Súmate a Cruz Ámbar.">
+  <meta name="theme-color" content="#050B1C">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Cruz Ámbar CDMX">
+  <meta property="og:title" content="Cruz Ámbar CDMX | Cuando todo se detiene, alguien corre hacia ti">
+  <meta property="og:description" content="Voluntarios de la Ciudad de México que atienden gratuitamente a la ciudadanía en atención prehospitalaria. Asociación civil sin fines de lucro.">
+  <meta property="og:image" content="assets/img/campo.jpg">
+  <meta property="og:image:alt" content="Voluntarios de Cruz Ámbar con chalecos naranjas durante un despliegue en campo">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <!-- Estado «hay JavaScript»: los estados ocultos de las animaciones solo existen con esta clase.
+       Si script.js no carga en 5 s, se retira y todo el contenido queda visible. -->
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.__cruzOK) document.documentElement.classList.remove('js'); }, 5000);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script defer src="script.js"></script>
+
+  <!-- Datos estructurados: solo información real del negocio (sin teléfono, dirección ni cifras: no fueron entregados) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "NGO",
+        "@id": "#cruz-ambar",
+        "name": "Cruz Ámbar",
+        "alternateName": ["Brigada Rama Auxilio y Apoyo A.C.", "Brigada de Apoyo y Auxilio"],
+        "description": "Asociación civil sin fines de lucro integrada por voluntarios que atienden gratuitamente a la ciudadanía en atención prehospitalaria en la Ciudad de México.",
+        "areaServed": { "@type": "AdministrativeArea", "name": "Ciudad de México" },
+        "knowsAbout": ["Atención prehospitalaria", "Primeros auxilios", "Reanimación cardiopulmonar", "Control de hemorragias"],
+        "slogan": "Cuando todo se detiene, alguien corre hacia ti."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "¿Tiene costo que Cruz Ámbar me atienda?", "acceptedAnswer": { "@type": "Answer", "text": "No. Cruz Ámbar es una asociación civil sin fines de lucro y atiende de manera gratuita a la ciudadanía en atención prehospitalaria." } },
+          { "@type": "Question", "name": "¿Quiénes forman Cruz Ámbar?", "acceptedAnswer": { "@type": "Answer", "text": "Somos voluntarios de la Ciudad de México que nos capacitamos y entrenamos para ayudar a quien lo necesita." } },
+          { "@type": "Question", "name": "¿Qué es la atención prehospitalaria?", "acceptedAnswer": { "@type": "Answer", "text": "Es la atención inmediata que recibe una persona lesionada o enferma en el lugar donde ocurre la emergencia, antes de llegar a un hospital." } },
+          { "@type": "Question", "name": "¿Qué hago si hay una emergencia ahora mismo?", "acceptedAnswer": { "@type": "Answer", "text": "Llama primero al 911. Si puedes hacerlo con seguridad, protege a la persona, da datos claros al operador y sigue sus indicaciones hasta que llegue la ayuda." } },
+          { "@type": "Question", "name": "¿Cómo puedo sumarme como voluntario o pedir información?", "acceptedAnswer": { "@type": "Answer", "text": "Usa la sección de contacto al final de esta página: cuéntanos qué te interesa y te responderemos." } }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <noscript>
+    <style>
+      .preloader{display:none!important}
+      .js .rv,.rv{opacity:1!important;transform:none!important}
+    </style>
+  </noscript>
+</head>
+
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== CARGADOR: «Iniciando protocolo ámbar» (se oculta solo en ≤ 2.5 s, también sin JavaScript) ===== -->
+  <div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Cargando Cruz Ámbar">
+    <div class="pl">
+      <div class="pl__emblem">
+        <svg class="pl__ring" viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="pl__track" cx="60" cy="60" r="54"/>
+          <circle class="pl__bar" cx="60" cy="60" r="54" pathLength="100"/>
+        </svg>
+        <img src="assets/emblema-cruz.webp" alt="" width="480" height="504">
+      </div>
+      <p class="pl__label">Iniciando protocolo ámbar</p>
+      <p class="pl__pct"><span id="plPct">0</span><small>%</small></p>
+      <svg class="pl__ecg" viewBox="0 0 320 60" preserveAspectRatio="none" aria-hidden="true">
+        <path pathLength="100" d="M0 30H90l10-22 14 44 12-30 8 8h40l10-24 14 46 12-30 6 8H320"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- Aviso de seguridad -->
+  <div class="alertbar">
+    <p><span class="alertbar__dot" aria-hidden="true"></span>¿Emergencia en este momento? <a href="tel:911">Llama al 911</a></p>
+  </div>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a class="brand" href="#inicio" aria-label="Cruz Ámbar, Ciudad de México — ir al inicio">
+        <img src="assets/emblema-cruz.webp" alt="" width="40" height="42">
+        <span class="brand__txt"><strong>CRUZ ÁMBAR</strong><small>Ciudad de México</small></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="#mision">Quiénes somos</a>
+        <a href="#que-hacemos">Qué hacemos</a>
+        <a href="#aprende">Aprende</a>
+        <a href="#galeria">Galería</a>
+        <a href="#preguntas">Preguntas</a>
+        <a class="btn btn--sm nav__cta" href="#contacto" data-interes="voluntario">Quiero sumarme</a>
+      </nav>
+
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== HÉROE ===== -->
+    <section class="hero" id="inicio" aria-labelledby="h1">
+      <div class="hero__bg" id="heroBg" aria-hidden="true">
+        <img class="hero__photo" src="assets/img/carpa-noche.jpg" alt="" width="1500" height="844">
+        <div class="hero__blob hero__blob--a"></div>
+        <div class="hero__blob hero__blob--b"></div>
+        <div class="hero__floor"></div>
+        <div class="dotgrid" id="dotgrid"></div>
+        <canvas class="hero__embers" id="embers"></canvas>
+      </div>
+
+      <div class="wrap hero__inner">
+        <!-- Escenario 3D: emblema, anillos, radar y satélite -->
+        <div class="stage" id="stage">
+          <div class="stage__par" id="stagePar">
+            <div class="stage__idle">
+              <div class="stage__tilt" id="stageTilt">
+                <div class="beam"></div>
+                <div class="ring ring--1"></div>
+                <div class="ring ring--2"></div>
+                <div class="ring ring--3"></div>
+                <span class="ripple" style="--k:0"></span>
+                <span class="ripple" style="--k:1"></span>
+                <span class="ripple" style="--k:2"></span>
+                <div class="core"><img src="assets/emblema-cruz.webp" alt="Emblema de Cruz Ámbar: cruz ámbar con el escudo de la Brigada Rama Auxilio y Apoyo, Ciudad de México" width="480" height="504"></div>
+                <div class="orbit"><div class="orbit__seal"><img src="assets/emblema-sello.webp" alt="Sello azul y dorado de la Brigada de Apoyo y Auxilio" width="480" height="499"></div></div>
+                <div class="hud hud--a" data-float><i class="dot"></i>CDMX · 19.43°N 99.13°W</div>
+                <div class="hud hud--b" data-float>Atención gratuita</div>
+                <div class="hud hud--c" data-float>Voluntarios</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__copy">
+          <p class="chip h-in" style="--d:0"><i class="dot"></i>Protocolo Ámbar · Ciudad de México</p>
+          <h1 id="h1">
+            <span class="kick h-in" style="--d:1">Atención prehospitalaria gratuita en la CDMX</span>
+            <span class="ln" style="--l:0"><span>Cuando todo</span></span>
+            <span class="ln" style="--l:1"><span>se detiene,</span></span>
+            <span class="ln em" style="--l:2"><span>alguien corre</span></span>
+            <span class="ln em" style="--l:3"><span>hacia ti.</span></span>
+          </h1>
+          <p class="lead h-in" style="--d:6">Somos <strong>Cruz Ámbar</strong>: voluntarios que atienden gratuitamente a la ciudadanía en atención prehospitalaria. Sin fines de lucro, con la técnica de quien se prepara para el peor momento de alguien más.</p>
+          <div class="cta-row h-in" style="--d:8">
+            <a class="btn btn--mag" href="#contacto" data-interes="voluntario"><span>Estoy listo para ayudar</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn--ghost" href="#que-hacemos"><span>Conoce lo que hacemos</span></a>
+          </div>
+          <ul class="facts h-in" style="--d:10" aria-label="Lo esencial de Cruz Ámbar">
+            <li>Asociación civil</li>
+            <li>Sin fines de lucro</li>
+            <li>Atención gratuita</li>
+            <li>Voluntarios</li>
+          </ul>
+        </div>
+      </div>
+
+      <svg class="hero__ecg" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+        <path pathLength="100" d="M0 40H260l14-30 20 62 16-42 10 10H620l14-30 20 62 16-42 10 10H1200"/>
+      </svg>
+      <a class="cue" href="#mision" aria-label="Deslizar hacia abajo"><span>Desliza</span><i></i></a>
+    </section>
+
+    <!-- ===== CINTA ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Atención prehospitalaria</span><span>Gratuita</span><span>Voluntarios</span><span>Sin fines de lucro</span><span>Primeros auxilios</span><span>CDMX</span>
+        <span>Atención prehospitalaria</span><span>Gratuita</span><span>Voluntarios</span><span>Sin fines de lucro</span><span>Primeros auxilios</span><span>CDMX</span>
+      </div>
+    </div>
+
+    <!-- ===== QUIÉNES SOMOS / MANIFIESTO ===== -->
+    <section class="manifesto on-light" id="mision" aria-labelledby="t-mision">
+      <div class="wrap">
+        <div class="manifesto__head rv">
+          <p class="eyebrow">01 · Quiénes somos</p>
+          <h2 class="sr-only" id="t-mision">Somos voluntarios que atienden gratis a la ciudadanía</h2>
+        </div>
+
+        <svg class="badge-ring" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#circ" startOffset="0">Atención prehospitalaria · Gratuita · Voluntaria · Sin fines de lucro ·</textPath></text>
+          <path class="badge-ring__x" d="M92 80h16v12h12v16h-12v12H92v-12H80V92h12z"/>
+        </svg>
+
+        <p class="manifesto__text" id="manifesto">Somos <em>voluntarios</em>. Somos una asociación civil <em>sin fines de lucro</em>. Atendemos <em>gratuitamente</em> a la ciudadanía en atención prehospitalaria, porque cuando alguien se cae, se lastima o se desvanece, la primera ayuda no debería depender de cuánto pueda pagar.</p>
+
+        <div class="facts3">
+          <article class="fact rv" style="--d:.05s">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg>
+            <h3>Antes del hospital</h3>
+            <p>La atención prehospitalaria es la que recibe una persona en el lugar de la emergencia, antes de llegar a un hospital. Ahí trabajamos.</p>
+          </article>
+          <article class="fact rv" style="--d:.15s">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <h3>En la Ciudad de México</h3>
+            <p>Eventos, calles, comunidades y aulas: nos preparamos para ayudar donde la ciudad nos necesite.</p>
+          </article>
+          <article class="fact rv" style="--d:.25s">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-9-9.4C2 7.2 4 4.5 7 4.5c2 0 3.5 1.1 5 3 1.5-1.9 3-3 5-3 3 0 5 2.7 4 6.1-1.5 4.8-9 9.4-9 9.4z"/></svg>
+            <h3>Por vocación</h3>
+            <p>Nadie cobra por atenderte y nadie te cobra por ser atendido. Lo hacemos porque creemos en ayudar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUÉ HACEMOS: tarjetas apiladas ===== -->
+    <section class="services" id="que-hacemos" aria-labelledby="t-serv">
+      <div class="wrap">
+        <header class="sec-head rv">
+          <p class="eyebrow">02 · Qué hacemos</p>
+          <h2 id="t-serv">Seis formas de estar <span class="hl">cuando alguien lo necesita.</span></h2>
+          <p class="sec-head__sub">Cada una la entrenamos, la repetimos y la compartimos. Porque en una emergencia no hay tiempo de improvisar.</p>
+        </header>
+
+        <div class="stack">
+          <article class="card" style="--i:0">
+            <div class="card__in spot">
+              <div class="card__txt">
+                <span class="num" aria-hidden="true">01</span>
+                <h3>Atención prehospitalaria gratuita</h3>
+                <p>Valoramos, estabilizamos y acompañamos a quien se lastima o se siente mal en la calle, en un evento o en su comunidad. Sin costo y sin letras chicas.</p>
+                <ul class="tags"><li>Valoración</li><li>Estabilización</li><li>Acompañamiento</li></ul>
+              </div>
+              <figure class="card__img corners">
+                <img src="assets/img/carpa-valoracion.jpg" alt="Brigadistas valorando a un paciente con una lámpara en un puesto de atención durante un evento nocturno" width="1500" height="1129" loading="lazy">
+                <figcaption>01 / 06</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="card" style="--i:1">
+            <div class="card__in spot">
+              <div class="card__txt">
+                <span class="num" aria-hidden="true">02</span>
+                <h3>Valoración y signos vitales</h3>
+                <p>Presión arterial, temperatura, oxigenación: medimos lo que importa para saber cómo está una persona y cuándo necesita más ayuda.</p>
+                <ul class="tags"><li>Presión arterial</li><li>Temperatura</li><li>Oximetría</li></ul>
+              </div>
+              <figure class="card__img corners">
+                <img src="assets/img/presion-arterial.jpg" alt="Dos voluntarias midiendo la presión arterial de una persona con baumanómetro en un puesto de atención" width="1200" height="1600" loading="lazy">
+                <figcaption>02 / 06</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="card" style="--i:2">
+            <div class="card__in spot">
+              <div class="card__txt">
+                <span class="num" aria-hidden="true">03</span>
+                <h3>Primeros auxilios y RCP</h3>
+                <p>Practicamos reanimación y manejo de la vía aérea con maniquíes y compañeros, hasta que la técnica sea memoria muscular.</p>
+                <ul class="tags"><li>RCP</li><li>Vía aérea</li><li>Paro cardiaco</li></ul>
+              </div>
+              <figure class="card__img corners">
+                <img src="assets/img/rcp-via-aerea.jpg" alt="Práctica de primeros auxilios: un voluntario con guantes abre la vía aérea de un compañero recostado" width="1200" height="1600" loading="lazy">
+                <figcaption>03 / 06</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="card" style="--i:3">
+            <div class="card__in spot">
+              <div class="card__txt">
+                <span class="num" aria-hidden="true">04</span>
+                <h3>Control de hemorragias y trauma</h3>
+                <p>Torniquetes, vendajes compresivos y manejo del sangrado: los minutos cuentan y las manos tienen que saber qué hacer.</p>
+                <ul class="tags"><li>Torniquete</li><li>Vendaje</li><li>Trauma</li></ul>
+              </div>
+              <figure class="card__img corners">
+                <img src="assets/img/hemorragia.jpg" alt="Práctica de control de hemorragia: voluntarios colocan un torniquete y un vendaje en la pierna de un compañero" width="1500" height="1125" loading="lazy">
+                <figcaption>04 / 06</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="card" style="--i:4">
+            <div class="card__in spot">
+              <div class="card__txt">
+                <span class="num" aria-hidden="true">05</span>
+                <h3>Inmovilización y manejo de lesionados</h3>
+                <p>Protegemos la columna y movemos a una persona lesionada con técnica, incluso cuando trae el casco puesto.</p>
+                <ul class="tags"><li>Columna</li><li>Casco</li><li>Traslado seguro</li></ul>
+              </div>
+              <figure class="card__img corners">
+                <img src="assets/img/simulacro-casco.jpg" alt="Simulacro de atención a un motociclista lesionado, con casco, recostado sobre un colchón azul" width="1500" height="1125" loading="lazy">
+                <figcaption>05 / 06</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="card" style="--i:5">
+            <div class="card__in spot">
+              <div class="card__txt">
+                <span class="num" aria-hidden="true">06</span>
+                <h3>Entrenamiento en campo y rescate</h3>
+                <p>Cuerdas, terreno y trabajo en equipo: salimos del aula para entrenar donde las cosas pasan de verdad.</p>
+                <ul class="tags"><li>Cuerdas</li><li>Terreno</li><li>Equipo</li></ul>
+              </div>
+              <figure class="card__img corners">
+                <img src="assets/img/rescate-vertical.jpg" alt="Voluntaria con casco y arnés escalando una pared de roca durante un entrenamiento de rescate" width="1200" height="1600" loading="lazy">
+                <figcaption>06 / 06</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-band rv">
+          <p>¿Y si la próxima vez que alguien lo necesite, <strong>fueras tú quien sabe qué hacer?</strong></p>
+          <a class="btn btn--mag" href="#contacto" data-interes="capacitacion"><span>Quiero aprender primeros auxilios</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMPROMISO ===== -->
+    <section class="pledge" id="compromiso" aria-labelledby="t-comp">
+      <div class="wrap">
+        <header class="sec-head rv">
+          <p class="eyebrow">03 · Nuestro compromiso</p>
+          <h2 id="t-comp">Ayuda <span class="hl">sin letra chica.</span></h2>
+        </header>
+
+        <div class="pledge__grid">
+          <div class="pledge__big rv rv-z">
+            <div class="pledge__rings" aria-hidden="true"><i></i><i></i><i></i></div>
+            <p class="pledge__num" aria-label="Cero pesos"><span>$</span>0</p>
+            <p class="pledge__cap">Lo que cuesta ser atendido por Cruz Ámbar.</p>
+            <p class="pledge__sub">Atención prehospitalaria gratuita para la ciudadanía.</p>
+          </div>
+
+          <div class="pledge__cards">
+            <article class="pcard spot rv" style="--d:.05s">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+              <h3>Gratuito</h3>
+              <p>Atendemos gratuitamente a la ciudadanía. Nadie tiene que pagar para recibir ayuda.</p>
+            </article>
+            <article class="pcard spot rv" style="--d:.15s">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 14.2c2.6.2 4.5 2.3 4.5 5"/></svg>
+              <h3>Voluntario</h3>
+              <p>Quienes te atienden lo hacen por vocación, dedicando su tiempo a servir.</p>
+            </article>
+            <article class="pcard spot rv" style="--d:.25s">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-9-9.4C2 7.2 4 4.5 7 4.5c2 0 3.5 1.1 5 3 1.5-1.9 3-3 5-3 3 0 5 2.7 4 6.1-1.5 4.8-9 9.4-9 9.4z"/></svg>
+              <h3>Sin fines de lucro</h3>
+              <p>Somos asociación civil: no buscamos ganancia, solo propósito.</p>
+            </article>
+            <article class="pcard spot rv" style="--d:.35s">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg>
+              <h3>Entrenado</h3>
+              <p>Simulacros, maniquíes y práctica en campo: nos preparamos antes de que nos necesiten.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== APRENDE: protocolo P.A.S. ===== -->
+    <section class="pas on-light" id="aprende" aria-labelledby="t-pas">
+      <div class="wrap">
+        <header class="sec-head rv">
+          <p class="eyebrow">04 · Aprende con nosotros</p>
+          <h2 id="t-pas">Tres letras que cambian el resultado: <span class="hl">P.A.S.</span></h2>
+          <p class="sec-head__sub">Proteger, Avisar, Socorrer. Es el orden en que actúa cualquier persona preparada. Así lo practicamos.</p>
+        </header>
+
+        <div class="pas__grid">
+          <div class="pas__media corners" id="pasMedia" aria-hidden="true">
+            <img class="on" src="assets/img/simulacro-patio.jpg" alt="" width="1200" height="1600" loading="lazy">
+            <img src="assets/img/capacitacion.jpg" alt="" width="1500" height="843" loading="lazy">
+            <img src="assets/img/rcp-valoracion.jpg" alt="" width="1200" height="1600" loading="lazy">
+            <span class="pas__tag" id="pasTag">P · Proteger</span>
+          </div>
+
+          <ol class="pas__steps">
+            <li class="pas-step on" data-i="0">
+              <span class="pas-step__l" aria-hidden="true">P</span>
+              <div>
+                <h3>Proteger</h3>
+                <p>Antes de ayudar, mira alrededor. Si la escena no es segura para ti, tampoco lo será para nadie más. Aléjate del peligro y protege a la persona.</p>
+                <figure class="pas-step__fig"><img src="assets/img/simulacro-patio.jpg" alt="Simulacro en un patio: voluntarios atienden a varias personas recostadas" width="1200" height="1600" loading="lazy"></figure>
+              </div>
+            </li>
+            <li class="pas-step" data-i="1">
+              <span class="pas-step__l" aria-hidden="true">A</span>
+              <div>
+                <h3>Avisar</h3>
+                <p>Llama al 911 y da datos claros: dónde estás, qué pasó y cuántas personas necesitan ayuda. Sigue las indicaciones del operador.</p>
+                <figure class="pas-step__fig"><img src="assets/img/capacitacion.jpg" alt="Capacitación de primeros auxilios con proyección y maniquíes en un salón" width="1500" height="843" loading="lazy"></figure>
+              </div>
+            </li>
+            <li class="pas-step" data-i="2">
+              <span class="pas-step__l" aria-hidden="true">S</span>
+              <div>
+                <h3>Socorrer</h3>
+                <p>Ayuda con lo que sabes, no con lo que imaginas. Por eso practicamos tanto: para que, llegado el momento, tus manos sepan qué hacer.</p>
+                <figure class="pas-step__fig"><img src="assets/img/rcp-valoracion.jpg" alt="Voluntarios practicando la valoración de una persona recostada sobre un cartón" width="1200" height="1600" loading="lazy"></figure>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="pas__cta rv">
+          <a class="btn btn--navy btn--mag" href="#contacto" data-interes="capacitacion"><span>Quiero capacitarme</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <p>Aprender toma unas horas. Saber qué hacer puede cambiar una vida.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EN CAMPO: la imagen se abre en grande con el scroll ===== -->
+    <section class="zoom" id="campo" aria-labelledby="t-campo">
+      <div class="zoom__sticky">
+        <figure class="zoom__frame corners" id="zoomFrame">
+          <img src="assets/img/campo.jpg" alt="Voluntarios con chalecos naranjas recorriendo un terreno durante un despliegue en campo al atardecer" width="1500" height="1125" loading="lazy">
+          <figcaption class="zoom__cap">
+            <p class="eyebrow">05 · En campo</p>
+            <h2 id="t-campo">Donde nos necesitan, <em>ahí estamos.</em></h2>
+            <p>Calles, eventos masivos, aulas y terreno abierto: así se ve el trabajo de nuestros voluntarios cuando salen a servir.</p>
+            <a class="btn btn--ghost" href="#galeria"><span>Quiero ver el trabajo de cerca</span></a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== GALERÍA ===== -->
+    <section class="gallery" id="galeria" aria-labelledby="t-gal">
+      <div class="wrap">
+        <header class="sec-head rv">
+          <p class="eyebrow">06 · Bitácora de campo</p>
+          <h2 id="t-gal">Así se ve ser voluntario en <span class="hl">Cruz Ámbar.</span></h2>
+          <p class="sec-head__sub">Entrenamientos, simulacros y puestos de atención. Toca cualquier foto para verla en grande.</p>
+        </header>
+      </div>
+
+      <div class="rails">
+        <div class="rail">
+          <div class="rail__track">
+            <button class="shot" type="button" data-i="0" style="--ar:4/3"><img src="assets/img/carpa-valoracion.jpg" alt="Brigadistas valorando a un paciente en un puesto de atención nocturno" width="1500" height="1129" loading="lazy"></button>
+            <button class="shot" type="button" data-i="1" style="--ar:3/4"><img src="assets/img/rcp-via-aerea.jpg" alt="Voluntario abriendo la vía aérea de un compañero durante una práctica" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="2" style="--ar:4/3"><img src="assets/img/simulacro-casco.jpg" alt="Simulacro de atención a un motociclista lesionado" width="1500" height="1125" loading="lazy"></button>
+            <button class="shot" type="button" data-i="3" style="--ar:3/4"><img src="assets/img/guardia-noche.jpg" alt="Brigadistas atendiendo a una persona entre la multitud durante un evento nocturno" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="4" style="--ar:16/9"><img src="assets/img/practica-equipo.jpg" alt="Voluntarios en una dinámica de equipo en un patio con papel picado" width="1500" height="843" loading="lazy"></button>
+            <button class="shot" type="button" data-i="5" style="--ar:4/3"><img src="assets/img/hemorragia.jpg" alt="Práctica de control de hemorragia con torniquete y vendaje" width="1500" height="1125" loading="lazy"></button>
+            <button class="shot" type="button" data-i="6" style="--ar:16/9"><img src="assets/img/capacitacion.jpg" alt="Capacitación de primeros auxilios en un salón con proyección" width="1500" height="843" loading="lazy"></button>
+            <!-- copia para el bucle continuo -->
+            <button class="shot" type="button" data-i="0" style="--ar:4/3" aria-hidden="true" tabindex="-1"><img src="assets/img/carpa-valoracion.jpg" alt="" width="1500" height="1129" loading="lazy"></button>
+            <button class="shot" type="button" data-i="1" style="--ar:3/4" aria-hidden="true" tabindex="-1"><img src="assets/img/rcp-via-aerea.jpg" alt="" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="2" style="--ar:4/3" aria-hidden="true" tabindex="-1"><img src="assets/img/simulacro-casco.jpg" alt="" width="1500" height="1125" loading="lazy"></button>
+            <button class="shot" type="button" data-i="3" style="--ar:3/4" aria-hidden="true" tabindex="-1"><img src="assets/img/guardia-noche.jpg" alt="" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="4" style="--ar:16/9" aria-hidden="true" tabindex="-1"><img src="assets/img/practica-equipo.jpg" alt="" width="1500" height="843" loading="lazy"></button>
+            <button class="shot" type="button" data-i="5" style="--ar:4/3" aria-hidden="true" tabindex="-1"><img src="assets/img/hemorragia.jpg" alt="" width="1500" height="1125" loading="lazy"></button>
+            <button class="shot" type="button" data-i="6" style="--ar:16/9" aria-hidden="true" tabindex="-1"><img src="assets/img/capacitacion.jpg" alt="" width="1500" height="843" loading="lazy"></button>
+          </div>
+        </div>
+
+        <div class="rail rail--rev">
+          <div class="rail__track">
+            <button class="shot" type="button" data-i="7" style="--ar:16/9"><img src="assets/img/carpa-noche.jpg" alt="Voluntarios revisando signos vitales a un joven con termómetro y oxímetro en una carpa de atención" width="1500" height="844" loading="lazy"></button>
+            <button class="shot" type="button" data-i="8" style="--ar:3/4"><img src="assets/img/rescate-vertical.jpg" alt="Voluntaria con casco y arnés escalando una pared de roca" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="9" style="--ar:3/4"><img src="assets/img/presion-arterial.jpg" alt="Voluntarias midiendo la presión arterial con baumanómetro" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="10" style="--ar:3/4"><img src="assets/img/simulacro-patio.jpg" alt="Simulacro con varias personas recostadas en un patio" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="11" style="--ar:3/4"><img src="assets/img/rcp-valoracion.jpg" alt="Voluntarios practicando la valoración de una persona recostada" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="12" style="--ar:4/3"><img src="assets/img/campo.jpg" alt="Voluntarios con chalecos naranjas en un despliegue en campo" width="1500" height="1125" loading="lazy"></button>
+            <!-- copia para el bucle continuo -->
+            <button class="shot" type="button" data-i="7" style="--ar:16/9" aria-hidden="true" tabindex="-1"><img src="assets/img/carpa-noche.jpg" alt="" width="1500" height="844" loading="lazy"></button>
+            <button class="shot" type="button" data-i="8" style="--ar:3/4" aria-hidden="true" tabindex="-1"><img src="assets/img/rescate-vertical.jpg" alt="" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="9" style="--ar:3/4" aria-hidden="true" tabindex="-1"><img src="assets/img/presion-arterial.jpg" alt="" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="10" style="--ar:3/4" aria-hidden="true" tabindex="-1"><img src="assets/img/simulacro-patio.jpg" alt="" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="11" style="--ar:3/4" aria-hidden="true" tabindex="-1"><img src="assets/img/rcp-valoracion.jpg" alt="" width="1200" height="1600" loading="lazy"></button>
+            <button class="shot" type="button" data-i="12" style="--ar:4/3" aria-hidden="true" tabindex="-1"><img src="assets/img/campo.jpg" alt="" width="1500" height="1125" loading="lazy"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IDENTIDAD: dos emblemas ===== -->
+    <section class="identity on-light" id="identidad" aria-labelledby="t-id">
+      <div class="wrap">
+        <header class="sec-head rv">
+          <p class="eyebrow">07 · Nuestra identidad</p>
+          <h2 id="t-id">Dos emblemas, <span class="hl">una misma vocación.</span></h2>
+        </header>
+
+        <div class="emblems">
+          <article class="emblem rv">
+            <div class="emblem__card emblem__card--dark" data-tilt>
+              <img src="assets/emblema-cruz.webp" alt="Emblema de la Brigada Rama Auxilio y Apoyo A.C., Cruz Ámbar México CDMX" width="480" height="504" loading="lazy">
+            </div>
+            <h3>La cruz ámbar</h3>
+            <p>Color de alerta, de calor y de luz que se ve de lejos. Es la señal que nos identifica: <strong>Brigada Rama Auxilio y Apoyo A.C., Cruz Ámbar, México CDMX.</strong></p>
+          </article>
+          <article class="emblem rv" style="--d:.12s">
+            <div class="emblem__card" data-tilt>
+              <img src="assets/emblema-sello.webp" alt="Sello de la Brigada de Apoyo y Auxilio con el Ángel de la Independencia, el mapa de México y símbolos de la Ciudad de México" width="480" height="499" loading="lazy">
+            </div>
+            <h3>El sello de la ciudad</h3>
+            <p>Pone a la Ciudad de México en el centro: el Ángel, Bellas Artes, el Metro y el mapa del país rodean una cruz. <strong>Brigada de Apoyo y Auxilio.</strong></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SÚMATE ===== -->
+    <section class="join" id="sumate" aria-labelledby="t-join">
+      <div class="join__x" aria-hidden="true"></div>
+      <div class="wrap">
+        <header class="sec-head rv">
+          <p class="eyebrow">08 · Súmate</p>
+          <h2 id="t-join">Hay un lugar para ti <span class="hl">en la brigada.</span></h2>
+          <p class="sec-head__sub">No importa si hoy no sabes nada de primeros auxilios. Importa que quieras estar listo para cuando alguien lo necesite.</p>
+        </header>
+
+        <div class="join__grid">
+          <a class="jcard spot rv" href="#contacto" data-interes="voluntario">
+            <span class="jcard__n" aria-hidden="true">01</span>
+            <h3>Quiero ser voluntario</h3>
+            <p>Prepárate, entrena y sal a ayudar con nosotros.</p>
+            <span class="jcard__go">Cuéntanos de ti <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="jcard spot rv" style="--d:.1s" href="#contacto" data-interes="capacitacion">
+            <span class="jcard__n" aria-hidden="true">02</span>
+            <h3>Quiero capacitarme</h3>
+            <p>Aprende primeros auxilios y qué hacer mientras llega la ayuda.</p>
+            <span class="jcard__go">Quiero aprender <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="jcard spot rv" style="--d:.2s" href="#contacto" data-interes="evento">
+            <span class="jcard__n" aria-hidden="true">03</span>
+            <h3>Quiero apoyo para mi evento o comunidad</h3>
+            <p>Cuéntanos qué necesitas y platicamos cómo ayudar.</p>
+            <span class="jcard__go">Platiquemos <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PREGUNTAS ===== -->
+    <section class="faq on-light" id="preguntas" aria-labelledby="t-faq">
+      <div class="wrap faq__wrap">
+        <header class="sec-head rv">
+          <p class="eyebrow">09 · Preguntas frecuentes</p>
+          <h2 id="t-faq">Lo que todos <span class="hl">preguntan.</span></h2>
+          <div class="faq__help">
+            <p>¿Te quedó otra duda? Cuéntanosla y la resolvemos sin compromiso.</p>
+            <a class="btn btn--navy btn--mag" href="#contacto" data-interes="duda"><span>Quiero resolver mi duda</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </header>
+
+        <div class="faq__list">
+          <details class="rv" open>
+            <summary>¿Tiene costo que Cruz Ámbar me atienda?</summary>
+            <p>No. Cruz Ámbar es una asociación civil sin fines de lucro y atiende de manera gratuita a la ciudadanía en atención prehospitalaria.</p>
+          </details>
+          <details class="rv" style="--d:.05s">
+            <summary>¿Quiénes forman Cruz Ámbar?</summary>
+            <p>Somos voluntarios de la Ciudad de México que nos capacitamos y entrenamos para ayudar a quien lo necesita.</p>
+          </details>
+          <details class="rv" style="--d:.1s">
+            <summary>¿Qué es la atención prehospitalaria?</summary>
+            <p>Es la atención inmediata que recibe una persona lesionada o enferma en el lugar donde ocurre la emergencia, antes de llegar a un hospital.</p>
+          </details>
+          <details class="rv" style="--d:.15s">
+            <summary>¿Qué hago si hay una emergencia ahora mismo?</summary>
+            <p>Llama primero al <a href="tel:911">911</a>. Si puedes hacerlo con seguridad, protege a la persona, da datos claros al operador y sigue sus indicaciones hasta que llegue la ayuda.</p>
+          </details>
+          <details class="rv" style="--d:.2s">
+            <summary>¿Cómo puedo sumarme como voluntario o pedir información?</summary>
+            <p>Usa la sección de contacto al final de esta página: cuéntanos qué te interesa y te responderemos.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="contact" id="contacto" aria-labelledby="t-cont">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="wrap contact__grid">
+        <div class="contact__copy rv">
+          <p class="eyebrow">10 · Contacto</p>
+          <h2 id="t-cont">Estoy listo: <span class="hl">hablemos.</span></h2>
+          <p class="contact__lead">Cuéntanos qué te trae por aquí. Sin costo y sin compromiso: solo una conversación para encontrar tu siguiente paso.</p>
+          <ol class="steps3">
+            <li><b>1</b> Cuéntanos qué buscas.</li>
+            <li><b>2</b> Te respondemos por WhatsApp.</li>
+            <li><b>3</b> Platicamos tu siguiente paso.</li>
+          </ol>
+          <p class="contact__911"><span class="alertbar__dot" aria-hidden="true"></span><span>¿Es una emergencia? No esperes: <a href="tel:911">llama al 911</a>.</span></p>
+        </div>
+
+        <div class="contact__panel rv" style="--d:.12s">
+          <!-- Formulario: se activa solo cuando WHATSAPP_NUMERO (script.js) tiene un número real -->
+          <form class="form" id="contactForm" hidden novalidate>
+            <fieldset class="choices">
+              <legend>¿Qué te interesa?</legend>
+              <label class="choice"><input type="radio" name="interes" value="Quiero ser voluntario" checked><span>Ser voluntario</span></label>
+              <label class="choice"><input type="radio" name="interes" value="Quiero capacitarme en primeros auxilios" id="int-capacitacion"><span>Capacitarme</span></label>
+              <label class="choice"><input type="radio" name="interes" value="Quiero apoyo para un evento o comunidad" id="int-evento"><span>Apoyo para un evento</span></label>
+              <label class="choice"><input type="radio" name="interes" value="Tengo una duda o quiero más información" id="int-duda"><span>Otra duda</span></label>
+            </fieldset>
+            <div class="field">
+              <label for="f-nombre">Tu nombre</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="¿Cómo te llamas?" required>
+            </div>
+            <div class="field">
+              <label for="f-msg">Tu mensaje</label>
+              <textarea id="f-msg" name="mensaje" rows="4" placeholder="Cuéntanos un poco más (opcional)"></textarea>
+            </div>
+            <button class="btn btn--wa btn--mag" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88zM20.46 3.49A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42z"/></svg><span>Quiero que me contacten por WhatsApp</span></button>
+            <p class="form__note">Al enviar, se abrirá WhatsApp con tu mensaje listo. No guardamos tus datos en esta página.</p>
+          </form>
+
+          <!-- Estado alterno mientras no exista un número de WhatsApp -->
+          <div class="soon" id="contactSoon">
+            <span class="soon__badge"><i class="dot"></i>Canal en activación</span>
+            <h3>Estamos activando nuestro canal oficial de WhatsApp.</h3>
+            <p>Muy pronto podrás escribirnos desde aquí. Mientras tanto, comparte esta página con alguien que quiera sumarse o capacitarse: cada persona que sabe qué hacer cuenta.</p>
+            <div class="soon__row">
+              <button class="btn btn--mag" type="button" id="shareBtn"><span>Quiero compartir esta página</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              <a class="btn btn--ghost" href="#inicio"><span>Volver al inicio</span></a>
+            </div>
+            <p class="soon__toast" id="shareMsg" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIE ===== -->
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logos">
+          <img src="assets/emblema-cruz.webp" alt="Emblema de Cruz Ámbar" width="480" height="504" loading="lazy">
+          <img src="assets/emblema-sello.webp" alt="Sello de la Brigada de Apoyo y Auxilio" width="480" height="499" loading="lazy">
+        </div>
+        <p><strong>Cruz Ámbar</strong> · Brigada Rama Auxilio y Apoyo A.C.<br>Ciudad de México.</p>
+        <p class="footer__small">Asociación civil sin fines de lucro. Atención prehospitalaria voluntaria y gratuita a la ciudadanía.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Enlaces del pie">
+        <a href="#mision">Quiénes somos</a>
+        <a href="#que-hacemos">Qué hacemos</a>
+        <a href="#aprende">Aprende P.A.S.</a>
+        <a href="#galeria">Galería</a>
+        <a href="#sumate">Súmate</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="footer__911"><span class="alertbar__dot" aria-hidden="true"></span><span>En una emergencia llama al <a href="tel:911">911</a>. Esta página es informativa y no sustituye la atención médica.</span></p>
+    </div>
+    <p class="footer__word" aria-hidden="true">CRUZ ÁMBAR</p>
+    <p class="footer__copy wrap">© 2026 Cruz Ámbar · Ciudad de México</p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp (se muestra solo si existe número real) -->
+  <a class="wa" id="waFloat" href="#contacto" target="_blank" rel="noopener" hidden aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88zM20.46 3.49A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42z"/></svg>
+    <span>Escríbenos</span>
+  </a>
+
+  <!-- Visor de fotos -->
+  <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de fotos" aria-hidden="true">
+    <button class="lb__x" type="button" id="lbClose" aria-label="Cerrar visor">✕</button>
+    <button class="lb__nav lb__prev" type="button" id="lbPrev" aria-label="Foto anterior">‹</button>
+    <figure class="lb__fig">
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb__nav lb__next" type="button" id="lbNext" aria-label="Foto siguiente">›</button>
+  </div>
+</body>
+</html>
